@@ -1,0 +1,256 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e0f7fa;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    background-color: #1a1a1a;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00bcd4;
+}
+
+.user-id h3 {
+    color: #ffffff;
+    font-size: 1.6em;
+}
+
+.header h1 {
+    color: #00bcd4;
+    font-size: 2.8em;
+    text-align: center;
+}
+
+.logout-btn {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.logout-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Main Content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Phần tải file và gửi file */
+.file-actions {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Cho phép xuống dòng nếu màn hình nhỏ */
+}
+
+/* Phần tải file lên (bên trái) */
+.upload-section {
+    flex: 1;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px; /* Đảm bảo không bị co quá nhỏ */
+}
+
+.upload-section h2 {
+    color: #00bcd4;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.upload-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.upload-form input[type="file"] {
+    font-size: 1.3em;
+    padding: 12px;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+}
+
+.upload-form button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-form button:hover {
+    background-color: #45a049;
+}
+
+/* Phần gửi file (bên phải) */
+.share-section {
+    flex: 1;
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 300px; /* Đảm bảo không bị co quá nhỏ */
+}
+
+.share-section h2 {
+    color: #00bcd4;
+    font-size: 2.2em;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.share-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+.share-form input[type="text"],
+.share-form input[type="file"] {
+    font-size: 1.3em;
+    padding: 12px;
+    border: 2px solid #00bcd4;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    width: 100%;
+    max-width: 300px;
+}
+
+.share-form button {
+    background-color: #2196F3;
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1.3em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.share-form button:hover {
+    background-color: #1976D2;
+}
+
+/* Phần danh sách file (giữ nguyên) */
+.file-list-section {
+    background-color: #2a2a2a;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.file-list-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.file-list-header h2 {
+    color: #00bcd4;
+    font-size: 2.2em;
+    text-align: center;
+}
+
+.toggle-arrow {
+    color: #00bcd4;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+.file-list {
+    list-style: none;
+    padding: 0;
+}
+
+.file-list li {
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.4em;
+    color: #fff;
+}
+
+.file-list li button {
+    padding: 12px 25px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.file-list li .download-btn {
+    background-color: #4CAF50;
+    color: white;
+    margin-right: 15px;
+}
+
+.file-list li .download-btn:hover {
+    background-color: #45a049;
+}
+
+.file-list li .delete-btn {
+    background-color: #f44336;
+    color: white;
+}
+
+.file-list li .delete-btn:hover {
+    background-color: #d32f2f;
+}
+
+/* Thông báo */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 30px;
+    color: white;
+    border-radius: 5px;
+    display: none;
+    font-size: 1.3em;
+    z-index: 1000;
+}
